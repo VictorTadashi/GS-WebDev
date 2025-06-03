@@ -3,6 +3,8 @@
     --cor-fundo01: #996543;
     --cor-fundo02: #354C21;
     --cor-fundo03: #984943;
+    --cor-fundo04: #1a5476;
+    --button-color: #00e535;
     --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, .6), 
     rgba(0, 0, 0, .8));
 }
@@ -304,4 +306,74 @@
         border-radius: 20px;
         width: 100%;
         height: auto;
+    }
+
+.container_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-fundo04);
+    color: var(--cor-primaria);
+}
+
+    & .title_form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    & .text_form{
+        padding: 0 80px;
+        text-align: center;
+    }
+
+    & .form_ajuda{
+        background-color: cornflowerblue;
+        color: white;
+        padding: 20px;
+        width: 700px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    & label{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    & input{
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+    }
+
+    & .button_form{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 800;
+        background-color: var(--button-color);
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        color: var(--cor-primaria);
+    }
+
+    & .button_form:hover{
+        background-color: #00b800;
+        transition: 0.3s;
     }
