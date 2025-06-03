@@ -1,0 +1,307 @@
+:root{
+    --cor-primaria: #FFFFFF;
+    --cor-fundo01: #996543;
+    --cor-fundo02: #354C21;
+    --cor-fundo03: #984943;
+    --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, .6), 
+    rgba(0, 0, 0, .8));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+}
+
+.container_home{
+    background-image: var(--bg-gradient), url(./img/ImgHome.png);
+    width: 100%;
+    height: 100vh;
+    color: var(--cor-primaria);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container_navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+    & .logo{
+        width: 150px;
+        height: auto;
+    }
+
+.nav_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    & li {
+        list-style: none;
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--cor-primaria);
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    & a:hover {
+        color: cornflowerblue;
+        transition: 0.3s;
+    }
+
+.home_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+    & h1{
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    & p{
+        font-size: 28px;
+        margin-top: 10px;
+        font-weight: 200;
+    }
+
+.container_problema{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color: var(--cor-fundo01);
+}
+
+    
+
+    & .problema_img{
+        width: 100%;
+        height: 100vh;
+    }
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & .problema_text{
+        display: flex;
+        flex-direction: column;
+        padding: 80px;
+        width: 90%;
+        color: var(--cor-primaria);
+    }
+
+    & .title_problema{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    & .problema_text p{
+        font-size: 32px;
+        font-weight: 200;
+    }
+
+.container_tecnologias{
+    background-image: var(--bg-gradient), url(./img/ImgTecnologias.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    color: var(--cor-primaria);
+}
+
+    & .tecnologias_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    & .title_tecnologias{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-top: 14%;
+        margin-bottom: 20px;
+    }   
+
+    & .tecnologias_text p{
+        font-size: 38px;
+        font-weight: 400;
+        padding: 0 80px;
+        width: 70%;
+        text-align: center;
+    }
+
+.container_objetivos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cor-fundo02);
+}
+
+    & .objetivos_text{
+        display: flex;
+        padding: 80px;
+        color: var(--cor-primaria);
+        flex-direction: column;
+    }
+
+    & .title_objetivos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    & .objetivos_text p{
+        font-size: 32px;
+        font-weight: 200;
+    }
+
+    & .img_objetivos{
+        width: 200%;
+        height: 100vh;
+    }
+
+.container_publico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+    background-image: var(--bg-gradient), url(./img/ImgPublico02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+    & .title_publico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    & .publico_text{
+        display: flex;
+        padding: 80px;
+        color: var(--cor-primaria);
+        flex-direction: column;
+        width: 100%;
+    }
+
+    & .publico_text p{
+        font-size: 32px;
+        font-weight: 200;
+        margin-bottom: 40px;
+    }
+
+    & .publico_img img{
+        border-radius: 20px;
+        width: 550px;
+        height: 350px;
+    }
+
+.container_beneficios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cor-fundo03);
+    color: var(--cor-primaria);
+}
+
+    & .beneficios_text{
+        display: flex;
+        padding: 80px;
+        color: var(--cor-primaria);
+        flex-direction: column;
+        font-size: 32px;
+    }
+
+    & .title_beneficios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    & .img_beneficios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    & .img_beneficios img{
+        width: 600px;
+        height: 50vh;
+    }
+
+.container_ajuda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+    background-image: var(--bg-gradient), url(./img/ImgAjuda02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+    & .ajuda_text{
+        display: flex;
+        padding: 110px;
+        color: var(--cor-primaria);
+        flex-direction: column;
+        width: 100%;
+    }
+
+    & .title_ajuda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    & .ajuda_text p{
+        font-size: 32px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    & .ajuda_img img{
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
