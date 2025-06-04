@@ -381,7 +381,6 @@
         width: 700px;
         margin: 20px auto;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
@@ -419,4 +418,102 @@
     & .button_form:hover{
         background-color: #00b800;
         transition: 0.3s;
+    }
+
+/* Container principal do quiz */
+.container_quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Título centralizado com tamanho 38px */
+    & .title_quiz {
+        text-align: center;
+        font-size: 52px;
+        margin-bottom: 10px;
+    }
+
+/* Texto abaixo do título, centralizado com largura limitada */
+    & .text_quiz {
+        text-align: center;
+        width: 600px;
+        max-width: 100%;
+        font-size: 18px;
+        margin: 0 auto 20px auto;
+    }
+
+/* Corpo do quiz */
+    & .quiz_corpo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 800px;
+        padding: 20px;
+        background-color: cornflowerblue; 
+        border-radius: 20px;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/* Pergunta: da esquerda pra direita com padding */
+    & .quiz_question {
+        text-align: left;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--cor-primaria);
+        animation: slideIn 0.5s ease forwards;
+    }
+
+/* Animação para a pergunta entrar da esquerda */
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo das opções */
+    & .opcoes {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    & .option {
+        background-color: white;
+        color: cornflowerblue;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    & .option:hover {
+        background-color: #e0e0e0;
+        color: #333;
+    }
+
+/* Resultado */
+    & .quiz_resultado {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    & .resultado {
+        text-align: left;
+        font-size: 20px;
+        padding: 10px;
+        color: var(--cor-primaria);
+        font-weight: bold;
     }
