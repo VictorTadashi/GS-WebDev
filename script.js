@@ -143,3 +143,41 @@ const perguntas = [
   }
 ];
 
+let indiceAtual = 0;
+let pontuacao = 0;
+
+const perguntaEl = document.getElementById("question");
+const opcoesEl = document.getElementById("opcoes");
+const resultadoEl = document.getElementById("result-message");
+const containerResultado = document.getElementById("result-container");
+
+function carregarPergunta() {
+  const perguntaAtual = perguntas[indiceAtual]; 
+  perguntaEl.textContent = perguntaAtual.pergunta; 
+  opcoesEl.innerHTML = ""; 
+
+   perguntaAtual.opcoes.forEach((opcao, index) => {
+    const botao = document.createElement("button");
+    botao.textContent = opcao;
+    botao.classList.add("option-button");
+    botao.addEventListener("click", () => verificarResposta(index));
+    opcoesEl.appendChild(botao); 
+  });
+}
+
+function verificarResposta(respostaSelecionada) {
+  const perguntaAtual = perguntas[indiceAtual];
+  if (respostaSelecionada === perguntaAtual.correta) {
+    pontuacao++; // Aumenta a pontuação se estiver correta
+  }
+
+  indiceAtual++;
+
+   if (indiceAtual < perguntas.length) {
+    carregarPergunta();
+  } else {
+    mostrarResultado();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", carregarPergunta);
