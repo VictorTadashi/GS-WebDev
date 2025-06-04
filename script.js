@@ -180,4 +180,21 @@ function verificarResposta(respostaSelecionada) {
   }
 }
 
+function mostrarResultado() {
+  perguntaEl.style.display = "none";
+  opcoesEl.style.display = "none";
+  containerResultado.classList.remove("hidden"); 
+
+  let mensagem = "";
+  if (pontuacao <= 3) {
+    mensagem = "Cuidado! Aconselho você a procurar mais sobre o assunto.";
+  } else if (pontuacao <= 6) {
+    mensagem = "Ok! Você até sabe um pouco sobre, mas aconselho você a ir atrás de mais informações.";
+  } else {
+    mensagem = "Parabéns!!! Você sabe bem sobre o assunto!";
+  }
+
+  resultadoEl.textContent = `Você acertou ${pontuacao}/${perguntas.length}. ${mensagem}`;
+}
+
 document.addEventListener("DOMContentLoaded", carregarPergunta);
