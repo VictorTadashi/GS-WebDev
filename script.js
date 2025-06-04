@@ -198,3 +198,25 @@ function mostrarResultado() {
 }
 
 document.addEventListener("DOMContentLoaded", carregarPergunta);
+
+//Personalização
+document.getElementById("theme-light").onclick = function () {
+  document.documentElement.style.setProperty("--cor-fundo01", "#f5d1b5");
+  document.documentElement.style.setProperty("--cor-fundo02", "#cde4c2");
+  document.documentElement.style.setProperty("--cor-fundo03", "#f2b1aa");
+  document.documentElement.style.setProperty("--cor-fundo04", "#a5d5f2");
+};
+
+document.getElementById("theme-dark").onclick = function () {
+  document.documentElement.style.setProperty("--cor-fundo01", "#4b3224");
+  document.documentElement.style.setProperty("--cor-fundo02", "#1c2b14");
+  document.documentElement.style.setProperty("--cor-fundo03", "#4a2320");
+  document.documentElement.style.setProperty("--cor-fundo04", "#0d2a3a");
+};
+
+document.getElementById("theme-nature").onclick = function () {
+  document.documentElement.style.setProperty("--cor-fundo01", "#996543");
+  document.documentElement.style.setProperty("--cor-fundo02", "#354C21");
+  document.documentElement.style.setProperty("--cor-fundo03", "#984943");
+  document.documentElement.style.setProperty("--cor-fundo04", "#1a5476");
+};
