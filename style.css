@@ -559,3 +559,51 @@
         color: var(--cor-primaria);
         font-weight: bold;
     }
+
+.menu_hamburguer {
+    display: none;
+    font-size: 32px;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 845px) {
+    .menu_hamburguer {
+        display: block;
+    }
+
+    .nav_link {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo01);
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        padding: 10px 0;
+    }
+
+    .nav_link li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav_link a {
+        margin: 10px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_link.ativo {
+        display: flex;
+    }
+
+    .nav_icones {
+        display: none;
+    }
+}

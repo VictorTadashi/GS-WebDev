@@ -220,3 +220,11 @@ document.getElementById("theme-nature").onclick = function () {
   document.documentElement.style.setProperty("--cor-fundo03", "#984943");
   document.documentElement.style.setProperty("--cor-fundo04", "#1a5476");
 };
+
+//Menu hamburguer
+const botaoMenu = document.getElementById("menu_hamburguer");
+const navLinks = document.querySelector(".nav_link");
+
+botaoMenu.onclick = function () {
+  navLinks.classList.toggle("ativo");
+};
