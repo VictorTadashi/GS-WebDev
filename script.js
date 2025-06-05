@@ -221,10 +221,30 @@ document.getElementById("theme-nature").onclick = function () {
   document.documentElement.style.setProperty("--cor-fundo04", "#1a5476");
 };
 
-//Menu hamburguer
-const botaoMenu = document.getElementById("menu_hamburguer");
-const navLinks = document.querySelector(".nav_link");
 
-botaoMenu.onclick = function () {
-  navLinks.classList.toggle("ativo");
-};
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  const sideMenu = document.getElementById('side-menu');
+
+  openBtn.addEventListener('click', function () {
+    sideMenu.classList.add('active');
+    openBtn.style.display = 'none';
+  });
+
+  closeBtn.addEventListener('click', function () {
+    sideMenu.classList.remove('active');
+    openBtn.style.display = 'block';
+  });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener('click', function (event) {
+    const isClickInside = sideMenu.contains(event.target) || openBtn.contains(event.target);
+    if (!isClickInside) {
+      sideMenu.classList.remove('active');
+      openBtn.style.display = 'block';
+    }
+  });
+});

@@ -560,50 +560,468 @@
         font-weight: bold;
     }
 
-.menu_hamburguer {
-    display: none;
-    font-size: 32px;
-    color: var(--cor-primaria);
-    cursor: pointer;
+
+.menu-toggle,
+.menu-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--cor-primaria);
 }
 
-/* Responsividade para telas pequenas */
-@media screen and (max-width: 845px) {
-    .menu_hamburguer {
-        display: block;
-    }
+/* Posicionamento do botão de fechar */
+.menu-close {
+  margin: 20px;
+  display: block;
+  text-align: left;
+}
 
-    .nav_link {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--cor-fundo01);
-        flex-direction: column;
-        align-items: center;
-        z-index: 10;
-        padding: 10px 0;
-    }
+/* Esconde o botão de abrir quando o menu estiver ativo */
+.side-menu.active ~ .menu-toggle {
+  display: none;
+}
 
-    .nav_link li {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
 
-    .nav_link a {
-        margin: 10px 0;
-        font-size: 18px;
-        width: 100%;
-        text-align: center;
-    }
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+  display: none; /* Oculto por padrão */
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
 
-    .nav_link.ativo {
-        display: flex;
-    }
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background-color: #333;
+  color: var(--cor-primaria);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
 
-    .nav_icones {
-        display: none;
-    }
+/* Quando o menu estiver ativo */
+.side-menu {
+  left: -100%;
+}
+.side-menu.active {
+  left: 0;
+}
+
+/* Estilos para os links do menu lateral */
+.side-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-links li {
+  margin: 20px 0;
+}
+
+.side-links a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilos para os ícones de tema no menu lateral */
+.side-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.side-icons .tema_icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsividade geral para telas menores que 1300px */
+@media (max-width: 1000px) {
+
+  .menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+  display: block; /* Agora SEMPRE aparece dentro do menu */
+  text-align: left;
+}
+
+  .nav_link,
+  .nav_icones {
+    display: none;
+  }
+
+
+  .container_home {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_carrossel {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_problema {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_tecnologias {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_objetivos {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_publico {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_beneficios {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_ajuda {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_quiz {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: 100vh;
+    width: 100% !important;
+    text-align: center;
+  }
+  .container_navbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+  }
+  .logo {
+    margin-bottom: 10px !important;
+  }
+  .nav_link {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 10px 0 !important;
+  }
+  .nav_link a {
+    margin: 10px 0 !important;
+    font-size: 18px !important;
+  }
+  .nav_icones {
+    margin-left: 0 !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+  .home_text {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  .home_text h1 {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_carrossel {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_problema {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_tecnologias {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_objetivos {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_publico {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_beneficios {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_ajuda {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_form {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .title_quiz {
+    font-size: 32px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .home_text p {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .tecnologias_text p {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .objetivos_text p {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .publico_text p {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .beneficios_text {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .ajuda_text p {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .text_form {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .text_quiz {
+    font-size: 20px !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .problema_img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 95vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .img_objetivos {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 95vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .publico_img img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 95vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .img_beneficios img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 95vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .ajuda_img img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 95vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .problema_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .tecnologias_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .objetivos_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .publico_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .beneficios_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .ajuda_text {
+    padding: 20px !important;
+    width: 100% !important;
+    max-width: 95vw;
+    text-align: center !important;
+  }
+  .form_ajuda {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 95vw !important;
+    padding: 10px !important;
+  }
+  .quiz_corpo {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 95vw !important;
+    padding: 10px !important;
+  }
+  .button_form {
+    width: 100% !important;
+    font-size: 18px !important;
+    margin: 10px 0 !important;
+  }
+  .option-button {
+    width: 100% !important;
+    font-size: 18px !important;
+    margin: 10px 0 !important;
+  }
+  .quiz_question {
+    text-align: center !important;
+    font-size: 18px !important;
+    padding: 10px !important;
+  }
+  .opcoes {
+    gap: 8px !important;
+  }
+  .option {
+    font-size: 16px !important;
+    padding: 8px !important;
+  }
+  .quiz_resultado {
+    text-align: center !important;
+    font-size: 18px !important;
+    padding: 8px !important;
+  }
+  .resultado {
+    text-align: center !important;
+    font-size: 18px !important;
+    padding: 8px !important;
+  }
 }
