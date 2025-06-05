@@ -200,30 +200,30 @@ function mostrarResultado() {
 document.addEventListener("DOMContentLoaded", carregarPergunta);
 
 //Personalização
-document.getElementById("theme-light").onclick = function () {
-  document.documentElement.style.setProperty("--cor-fundo01", "#f5d1b5");
-  document.documentElement.style.setProperty("--cor-fundo02", "#cde4c2");
-  document.documentElement.style.setProperty("--cor-fundo03", "#f2b1aa");
-  document.documentElement.style.setProperty("--cor-fundo04", "#a5d5f2");
-};
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("theme-light").onclick = () => {
+    document.documentElement.style.setProperty("--cor-fundo01", "#f9e4d4");
+    document.documentElement.style.setProperty("--cor-fundo02", "#cfe3d0");
+    document.documentElement.style.setProperty("--cor-fundo03", "#e8cfcf");
+    document.documentElement.style.setProperty("--cor-fundo04", "#9ccfe8");
+  };
 
-document.getElementById("theme-dark").onclick = function () {
-  document.documentElement.style.setProperty("--cor-fundo01", "#4b3224");
-  document.documentElement.style.setProperty("--cor-fundo02", "#1c2b14");
-  document.documentElement.style.setProperty("--cor-fundo03", "#4a2320");
-  document.documentElement.style.setProperty("--cor-fundo04", "#0d2a3a");
-};
+  document.getElementById("theme-dark").onclick = () => {
+    document.documentElement.style.setProperty("--cor-fundo01", "#4b2c20");
+    document.documentElement.style.setProperty("--cor-fundo02", "#1c2c10");
+    document.documentElement.style.setProperty("--cor-fundo03", "#4e2220");
+    document.documentElement.style.setProperty("--cor-fundo04", "#0f2e3f");
+  };
 
-document.getElementById("theme-nature").onclick = function () {
-  document.documentElement.style.setProperty("--cor-fundo01", "#996543");
-  document.documentElement.style.setProperty("--cor-fundo02", "#354C21");
-  document.documentElement.style.setProperty("--cor-fundo03", "#984943");
-  document.documentElement.style.setProperty("--cor-fundo04", "#1a5476");
-};
+  document.getElementById("theme-nature").onclick = () => {
+    document.documentElement.style.setProperty("--cor-fundo01", "#996543");
+    document.documentElement.style.setProperty("--cor-fundo02", "#354C21");
+    document.documentElement.style.setProperty("--cor-fundo03", "#984943");
+    document.documentElement.style.setProperty("--cor-fundo04", "#1a5476");
+  };
+});
 
-
-
-
+// Menu Hemburguer
 document.addEventListener('DOMContentLoaded', function () {
   const openBtn = document.getElementById('menu-open');
   const closeBtn = document.getElementById('menu-close');

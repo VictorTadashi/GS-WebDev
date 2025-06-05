@@ -437,7 +437,6 @@
         transition: 0.3s;
     }
 
-/* Container principal do quiz */
 .container_quiz {
     display: flex;
     flex-direction: column;
@@ -452,7 +451,6 @@
     background-attachment: fixed;
 }
 
-/* Título centralizado com tamanho 38px */
     & .title_quiz {
         text-align: center;
         font-size: 52px;
@@ -461,7 +459,6 @@
         color: var(--cor-primaria);
     }
 
-/* Texto abaixo do título, centralizado com largura limitada */
     & .text_quiz {
         text-align: center;
         width: 800px;
@@ -471,7 +468,6 @@
         color: var(--cor-primaria);
     }
 
-/* Corpo do quiz */
     & .quiz_corpo {
         display: flex;
         flex-direction: column;
@@ -483,7 +479,6 @@
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
     }
 
-/* Pergunta: da esquerda pra direita com padding */
     & .quiz_question {
         text-align: left;
         padding: 10px;
@@ -493,7 +488,6 @@
         animation: slideIn 0.5s ease forwards;
     }
 
-/* Animação para a pergunta entrar da esquerda */
 @keyframes slideIn {
   from {
     transform: translateX(-30px);
@@ -504,8 +498,6 @@
     opacity: 1;
   }
 }
-
-/* Estilo das opções */
     & .opcoes {
         margin-top: 10px;
         display: flex;
@@ -546,7 +538,6 @@
   background-color: #d0d0d0;
 }
 
-/* Resultado */
     & .quiz_resultado {
         margin-top: 10px;
         text-align: center;
@@ -570,14 +561,12 @@
   color: var(--cor-primaria);
 }
 
-/* Posicionamento do botão de fechar */
 .menu-close {
   margin: 20px;
   display: block;
   text-align: left;
 }
 
-/* Esconde o botão de abrir quando o menu estiver ativo */
 .side-menu.active ~ .menu-toggle {
   display: none;
 }
@@ -589,7 +578,7 @@
   font-size: 28px;
   cursor: pointer;
   color: var(--cor-primaria);
-  display: none; /* Oculto por padrão */
+  display: none; 
   position: absolute;
   left: 20px;
   top: 20px;
@@ -599,8 +588,7 @@
   position: fixed;
   top: 0;
   left: -100%;
-  width: 40%;
-  height: 100%;
+  width: 100%;
   background-color: #333;
   color: var(--cor-primaria);
   transition: left 0.3s ease;
@@ -608,7 +596,6 @@
   padding: 20px;
 }
 
-/* Quando o menu estiver ativo */
 .side-menu {
   left: -100%;
 }
@@ -616,7 +603,6 @@
   left: 0;
 }
 
-/* Estilos para os links do menu lateral */
 .side-links {
   list-style: none;
   padding: 0;
@@ -633,8 +619,10 @@
   font-size: 18px;
 }
 
-/* Estilos para os ícones de tema no menu lateral */
 .side-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 40px;
   display: flex;
   gap: 10px;
@@ -645,9 +633,7 @@
   cursor: pointer;
 }
 
-/* Responsividade geral para telas menores que 1300px */
-@media (max-width: 1000px) {
-
+@media (max-width: 768px) {
   .menu-toggle {
   background: none;
   border: none;
@@ -655,7 +641,7 @@
   cursor: pointer;
   color: var(--cor-primaria);
   margin-bottom: 20px;
-  display: block; /* Agora SEMPRE aparece dentro do menu */
+  display: block; 
   text-align: left;
 }
 
@@ -666,362 +652,363 @@
 
 
   .container_home {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    padding: 20px 0 ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_carrossel {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_problema {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
-    min-height: 100vh;
-    width: 100% !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    height: auto ;
+    width: 100% ;
     text-align: center;
   }
   .container_tecnologias {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 20px 0 ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_objetivos {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_publico {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
-    min-height: 100vh;
-    width: 100% !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 80px 0 ;
+    height: auto ;
+    width: 100% ;
     text-align: center;
   }
   .container_beneficios {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
-    min-height: 100vh;
-    width: 100% !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;   
     text-align: center;
   }
   .container_ajuda {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 60px 0 ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_form {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_quiz {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 20px 0 !important;
-    height: auto !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 20px 0 ;
+    height: auto ;
     min-height: 100vh;
-    width: 100% !important;
+    width: 100% ;
     text-align: center;
   }
   .container_navbar {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 10px 0 !important;
+    flex-direction: column ;
+    align-items: center ;
+    padding: 10px 0 ;
   }
   .logo {
-    margin-bottom: 10px !important;
+    margin-bottom: 10px ;
   }
   .nav_link {
-    flex-direction: column !important;
-    align-items: center !important;
-    margin: 10px 0 !important;
+    flex-direction: column ;
+    align-items: center ;
+    margin: 10px 0 ;
   }
   .nav_link a {
-    margin: 10px 0 !important;
-    font-size: 18px !important;
+    margin: 10px 0 ;
+    font-size: 18px ;
   }
   .nav_icones {
-    margin-left: 0 !important;
-    gap: 10px !important;
-    justify-content: center !important;
-  }
-  .home_text {
-    width: 100% !important;
-    padding: 10px !important;
+    margin-left: 0 ;
+    gap: 10px ;
+    justify-content: center ;
   }
   .home_text h1 {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 40px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
+
   .title_carrossel {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 32px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_problema {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_tecnologias {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
+
   .title_objetivos {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_publico {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_beneficios {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_ajuda {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_form {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .title_quiz {
-    font-size: 32px !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    text-align: center !important;
+    font-size: 58px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    text-align: center ;
   }
   .home_text p {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
+    font-size: 32px ;
+    margin-top: 40px;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
   }
-  .tecnologias_text p {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
+  .slideshow-container{
+    width: 100% ;
+    height: auto ;
+    max-width: 95vw;
+    display: block;
   }
-  .objetivos_text p {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .publico_text p {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .beneficios_text {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .ajuda_text p {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .text_form {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  .text_quiz {
-    font-size: 20px !important;
-    padding: 0 10px !important;
-    width: 100% !important;
-    text-align: center !important;
+  .problema_text p {
+    font-size: 32px ;
+    margin-bottom: 20px;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
   }
   .problema_img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100% ;
+    height: auto ;
+  }
+  .tecnologias_text p {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .objetivos_text p {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .publico_text p {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .beneficios_text {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .ajuda_text p {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .text_form {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .text_quiz {
+    font-size: 32px ;
+    padding: 40px;
+    width: 100% ;
+    text-align: center ;
+  }
+  .problema_img {
+    width: 100% ;
+    height: auto ;
     max-width: 95vw;
     margin: 0 auto;
     display: block;
   }
   .img_objetivos {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 95vw;
-    margin: 0 auto;
-    display: block;
+    width: 100% ;
+    height: auto ;
   }
   .publico_img img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100% ;
+    height: auto ;
     max-width: 95vw;
     margin: 0 auto;
     display: block;
   }
   .img_beneficios img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 95vw;
+    width: 100% ;
+    height: auto ;
     margin: 0 auto;
     display: block;
   }
   .ajuda_img img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100% ;
+    height: auto ;
     max-width: 95vw;
     margin: 0 auto;
     display: block;
   }
   .problema_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
+    margin-top: 40px;
+    margin-bottom: 100px;
   }
   .tecnologias_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
   }
   .objetivos_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
   }
   .publico_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
   }
   .beneficios_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
   }
   .ajuda_text {
-    padding: 20px !important;
-    width: 100% !important;
+    padding: 20px ;
+    width: 100% ;
     max-width: 95vw;
-    text-align: center !important;
+    text-align: center ;
   }
   .form_ajuda {
-    width: 100% !important;
-    min-width: unset !important;
-    max-width: 95vw !important;
-    padding: 10px !important;
+    width: 100% ;
+    min-width: unset ;
+    max-width: 95vw ;
+    padding: 10px ;
   }
   .quiz_corpo {
-    width: 100% !important;
-    min-width: unset !important;
-    max-width: 95vw !important;
-    padding: 10px !important;
+    width: 100% ;
+    min-width: unset ;
+    max-width: 95vw ;
+    padding: 10px ;
   }
   .button_form {
-    width: 100% !important;
-    font-size: 18px !important;
-    margin: 10px 0 !important;
+    width: 100% ;
+    font-size: 18px ;
+    margin: 10px 0 ;
   }
   .option-button {
-    width: 100% !important;
-    font-size: 18px !important;
-    margin: 10px 0 !important;
+    width: 100% ;
+    font-size: 18px ;
+    margin: 10px 0 ;
   }
   .quiz_question {
-    text-align: center !important;
-    font-size: 18px !important;
-    padding: 10px !important;
+    text-align: center ;
+    font-size: 18px ;
+    padding: 10px ;
   }
   .opcoes {
-    gap: 8px !important;
+    gap: 8px ;
   }
   .option {
-    font-size: 16px !important;
-    padding: 8px !important;
+    font-size: 16px ;
+    padding: 8px ;
   }
   .quiz_resultado {
-    text-align: center !important;
-    font-size: 18px !important;
-    padding: 8px !important;
+    text-align: center ;
+    font-size: 18px ;
+    padding: 8px ;
   }
   .resultado {
-    text-align: center !important;
-    font-size: 18px !important;
-    padding: 8px !important;
+    text-align: center ;
+    font-size: 18px ;
+    padding: 8px ;
   }
 }
